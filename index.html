@@ -153,7 +153,7 @@
                     </div>
 
                     <!--Call to Action-->
-                    <a href="#" class="button">ENQUIRE NOW</a>
+                    <a href="#" class="button" id="enquire">ENQUIRE NOW</a>
                     <!--End Call to Action-->
 
                 </div>
@@ -739,6 +739,74 @@
 
     </div>
 
+      <!-- Popup -->
+      <div id="popup">
+        <span class="close-btn" style="cursor: pointer; float: right;">&times;</span>
+        <h3>Enquiry Form</h3>
+        <form id="enquiryForm">
+            <!-- Enquiry Type -->
+            <label>Enquiry Type:</label>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="organization" name="enquiryType" value="Organization"> Organization
+                <input type="checkbox" id="individual" name="enquiryType" value="Individual"> Individual
+            </div>
+            
+            <label>Please select one or more from the following:</label>          
+            <div class="checkbox-group">
+                <input type="checkbox" id="one" name="selectnumbers" value="One"> One
+                <input type="checkbox" id="two" name="selectnumbers" value="Two"> Two
+                <input type="checkbox" id="three" name="selectnumbers" value="Three"> Three
+                <input type="checkbox" id="four" name="selectnumbers" value="Four"> Four
+                <input type="checkbox" id="five" name="selectnumbers" value="Five"> Five
+            </div>
+        
+            <!-- Conditional Input: First/Last Name or Company Name -->
+            <div id="nameFields">
+                <label>First Name <span class="required">*</span>:</label>
+                <input type="text" id="firstName" placeholder="Enter First Name" required>
+        
+                <label>Last Name <span class="required">*</span>:</label>
+                <input type="text" id="lastName" placeholder="Enter Last Name" required>
+            </div>
+        
+            <div id="companyField" class="hidden">
+                <label>Company Name <span class="required">*</span>:</label>
+                <input type="text" id="companyName" placeholder="Enter Company Name">
+            </div>
+        
+            <!-- Number of Attendees -->
+            <label>Number of Attendees:</label>
+            <input type="number" id="attendees" placeholder="Enter only numbers">
+        
+            <!-- Suitable Date -->
+            <label>Suitable Date:</label>
+            <input type="date" id="suitableDate">
+        
+            <!-- Contact Details -->
+            <label>Contact Number <span class="required">*</span>:</label>
+            <input type="text" id="contactNumber" placeholder="Enter Contact Number" required>
+        
+            <label>Contact Email<span class="required">*</span>:</label>
+            <input type="email" id="contactEmail" placeholder="Enter Email Address" required>
+        
+            <!-- Address Fields -->
+            <label>Address (Optional):</label>
+            <input type="text" id="address" placeholder="Enter Address">
+        
+            <label>Postcode (Optional):</label>
+            <input type="text" id="postcode" placeholder="Enter Postcode">
+        
+            <!-- Marketing News Checkbox -->
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="marketingNews"> Keep me updated on Marketing News</label>
+            </div>
+        
+            <!-- Submit Button -->
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
     <!-- Include JavaScript resources -->
     <script src="js/jquery.1.8.3.min.js"></script>
     <script src="js/wow.min.js"></script>
@@ -752,7 +820,5 @@
     <script src="js/images-loaded.min.js"></script>
     <script src="js/lightbox.min.js"></script>
     <script src="js/site.js"></script>
-
-
 </body>
 </html>
